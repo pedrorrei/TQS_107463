@@ -1,0 +1,13 @@
+How long did the API calls take on average, minimum and maximum?
+Average (avg): 323.36ms
+Minimum (min): 15.54ms
+Maximum (max): 1.2s (which is 1200ms)
+(These values are from the http_req_duration line).
+How many requests were made?
+3765 requests were made in total.
+(This value is from the http_reqs line).
+How many requests failed? (i.e., whose HTTP status code was not 200)
+0 requests failed.
+(This is shown on the http_req_failed line as 0.00% and 0 out of 3765. The checks also confirm ✓ status is 200 passed for all 3765 requests).
+Important Observation:
+Notice that even though no requests failed (they all returned HTTP 200), the http_req_duration threshold you set (p(95)<500) was crossed. The 95th percentile response time (p(95)) was 618.53ms, which is higher than the 500ms limit. This indicates that while the server handled all requests successfully, it slowed down significantly under this higher, sustained load, causing 5% of the requests to take longer than your desired performance target. K6 correctly flagged this with the ✗ next to the threshold and the ERRO[0090] message at the end.

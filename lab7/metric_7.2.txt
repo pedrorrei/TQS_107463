@@ -1,0 +1,10 @@
+How long did the API calls take on average, minimum and maximum?
+Average (avg): 218.22ms
+Minimum (min): 18.86ms
+Maximum (max): 788.54ms
+(These values are taken directly from the http_req_duration line).
+How many requests were made?
+1396 requests were made in total.
+(This value is taken from the http_reqs line).
+How many requests failed? (i.e., whose HTTP status code was not 200)
+0 requests failed.

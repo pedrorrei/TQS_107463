@@ -1,0 +1,7 @@
+How long did the API call take?
+Look at the http_req_duration metric. The average (avg), minimum (min), median (med), and maximum (max) are all 117.01ms. Since only one request was made, all these values are the same.
+How many requests were made?
+Look at the http_reqs metric. It shows 1.
+How many requests failed? (i.e., whose HTTP status code was not 200)
+Look at the http_req_failed metric. It shows 0.00% and 0 out of 1. This means 0 requests failed.
+This is further confirmed by the checks section showing ✓ status is 200 passed successfully.
